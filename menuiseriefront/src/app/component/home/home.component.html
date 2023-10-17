@@ -1,1 +1,7 @@
-<p>home works!</p>
+<ng-container *ngIf="isLoading">
+  <mat-progress-spinner></mat-progress-spinner>
+</ng-container>
+<ng-container *ngIf="!isLoading">
+  <p><i [matTooltip]="message" class="fa fa-xl fa-solid fa-magnifying-glass"></i>Bonjour</p>
+
+</ng-container>
