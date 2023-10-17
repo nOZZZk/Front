@@ -1,3 +1,7 @@
+import {Horaire} from "../horaire/horaire.model";
+import {Avis} from "../avis/avis.model";
+
+
 export class Menuiserie {
 
 
@@ -57,4 +61,12 @@ export class Menuiserie {
     this._avis = value;
   }
 
+  serialize(){
+    return {
+      'menuiserie_id': this.menuiserie_id,
+      'nom':this.nom,
+      'horaires': this.horaires,
+      'avis' : this.avis
+    }
+  }
 }

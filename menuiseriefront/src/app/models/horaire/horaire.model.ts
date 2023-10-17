@@ -1,3 +1,4 @@
+import {Jour} from "../enum/jour.enum";
 export class Horaire {
 
   private _horaire_id : number;
@@ -48,3 +49,14 @@ export class Horaire {
   set heure_apres_midi(value: string) {
     this._heure_apres_midi = value;
   }
+
+  serialize(){
+    return {
+      'horaire_id' : this.horaire_id,
+      'heure_apres_midi' : this._heure_apres_midi,
+      'heure_matin' : this.heure_matin,
+      'jour' : this.jour
+
+    }
+  }
+}

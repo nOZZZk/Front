@@ -1,7 +1,5 @@
 export class Avis {
 
-  export class Avis {
-
   private _avis_id : number;
 
   private _pseudo : string;
@@ -71,5 +69,16 @@ export class Avis {
 
   set note(value: string) {
     this._note = value;
+  }
+
+  serialize(){
+    return {
+      'avis_id' : this.avis_id,
+      'pseudo' : this.pseudo,
+      'is_approved' : this.is_approved,
+      'is_archived' : this.is_archived,
+      'description' : this.description,
+      'note' : this.note
+    }
   }
 }
